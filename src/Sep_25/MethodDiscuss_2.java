@@ -26,19 +26,17 @@ public class MethodDiscuss_2 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub 
 		
-		char d='f';
-		char h='k';
-		String gh ="fdjkfjd";
-		String gh1 ="k";
+		
+		char h='5';
 		boolean k1 =true;
-		boolean k2= false;
+		
 		
 		
 		MethodDiscuss_2 meth=new MethodDiscuss_2();
 		meth.addition(10,"leo");
 		meth.subtraction(15,10);
-		meth.division(25,'5');
-		meth.multiplication(55, true);
+		meth.division(25,h);
+		meth.multiplication(55, k1);
 		
 		
 		
