@@ -5,6 +5,7 @@ public class MethodsDiscussion {
 	int a =10;
 	int b=20;
     //Method name
+	//Bracket is empty, there is no arguments
 	void nellore()
 	{
 		//Variable used inside the method, and the scope is inside only
@@ -14,6 +15,7 @@ public class MethodsDiscussion {
 	}
 	//method name
 	//Void means which will not return anything
+	                  //Bracket is empty, there is no arguments
 	void andhrapradesh()
 	{
 		int c=b-a;
