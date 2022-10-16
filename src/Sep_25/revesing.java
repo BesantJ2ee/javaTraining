@@ -47,7 +47,12 @@ public class revesing {
       //Decrement
       for(int i=df.length-1;i>=0;i--)
       {
-    	  System.out.print(df[i]);
+    	 if("F".equals(df[i]))
+    	 {
+    		 System.out.println(i);	 
+    		 System.out.println(df[i+8]);
+    	 }
+  	 
       }
       
       
