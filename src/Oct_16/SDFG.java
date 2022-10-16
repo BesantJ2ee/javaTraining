@@ -12,6 +12,8 @@ public class SDFG {
 		String[] ab = v.split("");
 		String x = null;
 		String[] nm = new String[ab.length];
+		//Creating new string array
+		//because existng array we cant modify
 		//String[] nm = new String[ab.length];
 		for (int i = 0; i < ab.length; i++) {
 			if ("P".equals(ab[i])) {
