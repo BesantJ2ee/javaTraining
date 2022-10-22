@@ -7,11 +7,19 @@ public class SDFG {
 		// Exact logic of replace all
 		//replace first
 		
-		String v = "POLAND PORTUGUAL";
+		String v = "POLANP";
 		// lOGIC for replace first
 		String[] ab = v.split("");
-		String x = null;
+		int s =10;
+		 s=20;
+		
+		String x = "v";
+		       
+		//default value of string is null
 		String[] nm = new String[ab.length];
+		//NM is having same elements of ab and the default elements are 
+		//null
+		//{"C",null,null,null,null,null}
 		//Creating new string array
 		//because existng array we cant modify
 		//String[] nm = new String[ab.length];
@@ -25,6 +33,9 @@ public class SDFG {
 			} else {
 				//remaing all elements of array added to new array
 				nm[i] = ab[i];
+				//nm[1] =ab[1]
+	//Telling that please assighn o element from ab array with position 1 to
+	//o element to nm array with position 1
 			}
 		}
 		for (int j = 0; j < nm.length; j++) {
