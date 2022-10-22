@@ -6,6 +6,22 @@ public class multipleif {
 		// TODO Auto-generated method stub
 		int a=20;
         int b=10;
+   //     OR Gate
+
+     //   input a ,  input b   , result   any one input true means  will get the result
+      //  true1        true1        true1
+      //  true1        false0       true1
+      //  false0        true1        true1
+      //  false0       false0        false0
+
+
+       // AND Gate
+        //                                  both input true means  will get the result
+      //  input a    , input b  , result
+      //  true1          true1        true1
+      //  false0         true 1       false0
+      //  true1          false 0      false0
+      //  false0         false 0      false0
         //> greater than symbol
         //< lesser than symbol
         //|| IN java OR gate
