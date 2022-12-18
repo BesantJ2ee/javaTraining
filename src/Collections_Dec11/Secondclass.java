@@ -9,7 +9,7 @@ public class Secondclass {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+		//insertion order, duplicate removed
 		LinkedHashSet<String> zlinked = new LinkedHashSet<String>();
 		zlinked.add("apple");	
 		zlinked.add("orange");
@@ -22,7 +22,7 @@ public class Secondclass {
 			
 		}
 		
-		
+		//sorted based on ascending, duplicate removed
 		TreeSet<String> ztree = new TreeSet<String>();
 		ztree.add("apple");	
 		ztree.add("orange");
@@ -36,7 +36,7 @@ public class Secondclass {
 		}
 		
 		
-		
+		//no order based on hashcode, duplicate removed
 		HashSet<String> az = new HashSet<String>();
 		 az.add("apple");	
 		  az.add("orange");
@@ -49,7 +49,7 @@ public class Secondclass {
 			
 		}
 		
-		
+		//insertion order , duplicates allowed
 		ArrayList<String>  a2 = new ArrayList<String>();
 		  a2.add("apple");	
 		  a2.add("orange");
