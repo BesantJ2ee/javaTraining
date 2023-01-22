@@ -15,23 +15,29 @@ public class AllStreamOperation {
 		// TODO Auto-generated method stub
 		   
 		
-		  int a[]= {3,4,4,7,3}; //Declare an Array
-           
-    Arrays.stream(a).filter(x->x%2==0).
-    forEach(System.out::println); //Find the numbers divisible by 2
-     
-    System.out.println("Sum1 "+IntStream.of(a).map(i -> i).sum());
-   
-    System.out.println("Distinct element "+IntStream.of(a).map(i -> i).distinct()); 
+		  int a[]= {4,3,10}; //Declare an Array
+           //average = sum of elements/no of elements
+    Arrays.stream(a).filter(x->x%3==0).
+    forEach(System.out::print); //Find the numbers divisible by 2
+    System.out.println();
+    Arrays.stream(a).filter(x->x>=4).
+    forEach(System.out::println);
     
-    
+    System.out.println();
+    System.out.println("Sum1 "+IntStream.of(a).sum());
+    System.out.println("Count of element "+IntStream.of(a).count());
    
+  //  System.out.println("Distinct element "+IntStream.of(a).map(i -> i).distinct()); 
+    
  
     System.out.println("Sum2 "+Arrays.stream(a).filter(x->x%2==0).sum());
           
            //To find 
            OptionalDouble average=Arrays.stream(a).average();
-                   
+            
+           System.out.println("Average without check"+
+           average.getAsDouble());
+           
            if(average.isPresent())
           {
           	  System.out.println("Average"+average.getAsDouble());	
@@ -41,15 +47,15 @@ public class AllStreamOperation {
           	System.out.println("Average is 0");
            }
          
-          OptionalInt maxValue=Arrays.stream(a).max();
-          OptionalInt minValue=Arrays.stream(a).min();
+          OptionalInt maxi=Arrays.stream(a).max();
+          OptionalInt mini=Arrays.stream(a).min();
            
-          System.out.println("Max    "+maxValue.getAsInt());
+          System.out.println("Max    "+maxi.getAsInt());
           
-          System.out.println("Max    "+minValue.getAsInt());
+          System.out.println("Max    "+mini.getAsInt());
           
           
-          IntStream stream = IntStream.range(3, 400);
+          IntStream stream = IntStream.range(2, 50);
           Stream<Integer> stream1 = stream.boxed();
           System.out.println("Boxed");
           stream1.forEach(System.out::println);
@@ -63,11 +69,11 @@ public class AllStreamOperation {
           System.out.println("Doublestream");
           DoubleStream doubleStream = DoubleStream.generate(()
                   -> { 
-                	  return (double)(Math.random() * 10000); 
+                	  return (double)(Math.random()* 10000); 
                 	  });
          
                // Displaying the randomly generated values
-          doubleStream.limit(7).forEach(System.out::println);
+          doubleStream.limit(3).forEach(System.out::println);
           doubleStream.close();
           
           Stream<Integer> boxed=Arrays.stream(a).boxed();
@@ -97,7 +103,7 @@ public class AllStreamOperation {
             
           // Using flatMap for transformating and flattening.
           List<Integer> listofInts  = listOfListofInts.stream()
-                                      .flatMap(n -> n.stream())
+                                      .flatMap(y -> y.stream())
                                       .collect(Collectors.toList());
     
           System.out.println("The Structure after flattening is : " +
@@ -114,6 +120,25 @@ public class AllStreamOperation {
           marks.add(96);
           marks.add(78);
    
+          List<Integer> updatedMarksGrace
+          = marks.stream()
+                .map(i -> i + 5)
+                .collect(Collectors.toList());
+          System.out.println("Gace marks for all students "+updatedMarksGrace);
+          
+          
+          List<Integer> updatedMarksforSelected
+          = marks.stream().filter(i->i<=30)
+                .map(i -> i + 5)
+                .collect(Collectors.toList());
+          System.out.println("Gace marks for selected student "+updatedMarksforSelected);
+          
+          //How to remove duplicate
+          List<Integer> dupicate
+          = marks.stream().distinct()
+                .collect(Collectors.toList());
+          System.out.println("dupicate "+dupicate);
+          
           // Printing the marks of the students before grace
           System.out.println(
               "Marks of students before grace : " + marks);
